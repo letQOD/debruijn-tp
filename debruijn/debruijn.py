@@ -35,7 +35,7 @@ def cut_kmer(seq, k):
 
 ### creation du dictionnaire de k-mers ###
 def build_kmer_dict(fqfile, k): 
-    """returns a kmer dictionary as key=k-mer, value= n k-mer"""           ###fqfile=arg.i, k=arg.k
+    """returns a kmer dictionary as key=k-mer, value= n k-mer"""
     kmer_dic = {}
     for i in read_fastq(fqfile):
         for kmer in cut_kmer(i, k):
